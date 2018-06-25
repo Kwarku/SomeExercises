@@ -25,6 +25,7 @@ public class Rownoleglobok {
 
 
     private static final String SIGN_OF_PARALLELOGRAM_BODY = "*";
+    private static final String SIGN_OF_EMPTY_SPACE = " ";
 
 
     private int height;
@@ -72,15 +73,15 @@ public class Rownoleglobok {
     }
 
     private void drawRow() {
-        for (int j = 0; j < width; j++) {
+        for (int i = 0; i < width; i++) {
             System.out.print(SIGN_OF_PARALLELOGRAM_BODY);
         }
     }
 
-    private void drawStep(int i) {
+    private void drawStep(int stepNumber) {
         int absStep = Math.abs(step);
-        for (int k = i * absStep; k > 0; k--) {
-            System.out.print(" ");
+        for (int i = stepNumber * absStep; i > 0; i--) {
+            System.out.print(SIGN_OF_EMPTY_SPACE);
         }
     }
 
